@@ -10,6 +10,20 @@
     <!-- tailwind and daisy ui link up -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- customize your configuration -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'p-tag':'#131318',
+                'a-tag':'#424247'
+              }
+            }
+          }
+        }
+      </script>
     <style>
         .manrope-font{
             font-family: "Manrope", sans-serif;
@@ -17,46 +31,54 @@
     </style>
     <title>Hockeys Assignment</title>
 </head>
-<body>
+<body class="manrope-font">
     
     
 <!-- header section start -->
 
 <header class="max-w-screen-xl mx-auto">
     <!-- navbar start -->
-     <nav>
-        <div class="navbar bg-base-100">
+     <nav class="my-16">
+        <div class="navbar">
             <div class="navbar-start">
               <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h16M4 18h7" class="lg:hidden" />
-                  </svg>
-                  <div>
-                    <h1>Hockey<span>’</span>s</h1>
-                  </div>
+                <div class="flex items-center lg:flex-row">
+                    <div class="flex items-center gap-4 lg:flex lg:gap-0">
+                        <div tabindex="0" role="button" class="">
+                            <svg
+                               xmlns="http://www.w3.org/2000/svg"
+                               class="h-5 w-5"
+                               fill="none"
+                               viewBox="0 0 24 24"
+                               stroke="currentColor">
+                               <path
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 stroke-width="2"
+                                 d="M4 6h16M4 12h16M4 18h7" class="lg:hidden" />
+                             </svg>
+                             
+                           </div>
+                        <div>
+                            <h1 class="text-4xl font-extrabold">Hockey<span class="text-orange-500">’</span>s</h1>
+                          </div>
+                    </div>
+                    
+                    <div>
+                      <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow absolute left-0">
+                      <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Pages</a></li>
+                      <li><a>Block</a></li>
+                      <li><a>Contact</a></li>
+                    </ul>
+                    </div>
                 </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>About</a></li>
-                </ul>
               </div>
             </div>
             <div class="navbar-center">
-              <ul>
-                <li><a href="">Home</a></li>
+              <ul class="flex text-base gap-11 text-p-tag hidden lg:flex">
+                <li class="text-orange-500 font-bold"><a href="">Home</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Pages</a></li>
                 <li><a href="">Block</a></li>
@@ -64,25 +86,25 @@
               </ul>
             </div>
             <div class="navbar-end">
-              <button class="btn btn-ghost btn-circle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </button>
-              <button class="btn btn-ghost btn-circle">
-                <div class="indicator">
-                    <button class="btn btn-outline btn-error">Error</button>
+              <div class="flex items-center gap-6">
+                <button class="hidden lg:flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </button>
+                  <div class="indicator">
+                    <button class="btn btn-outline btn-error">Get Ticket</button>
                 </div>
-              </button>
+              </div>
             </div>
           </div>
      </nav>
